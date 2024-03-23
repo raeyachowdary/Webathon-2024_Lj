@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlyPets</title>
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Basic styling */
+        body {
+            font-family: poppins, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #b4dbe6;
+            background-size: cover;
+            color: #fff;
+            padding: 2px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav {
+             /* Semi-transparent background for better readability */
+            align-items: center;
+            display: flex;
+            margin-bottom: 2rem;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            color: black;
+            padding: 20px 7%;
+        }
+
+        nav a {
+            color: #0a0808;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            padding: 20px 5%;
+        }
+
+        .hero {
+            background-image: url('https://i.pinimg.com/originals/d8/bc/76/d8bc76c99465a11ffee91e09de10add1.gif');
+            background-size: cover;
+            background-position: center;
+            height: 1024px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #050000;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            top: 90px;
+            position: absolute;
+        }
+        .hero p {
+            position: relative;
+            right: 450px;
+            margin-bottom: 20px ;
+        }
+        .services img{
+            max-width: 100px;
+            margin-bottom: 1rem;
+            width: 200px;
+            border-radius: 50%;
+        }
+        #services {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .services {
+            background-color: #d8d8d8;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .services h2 {
+            margin-bottom: 20px;
+            color: #333;
+            
+        }
+
+        .services ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .services button a{
+            text-decoration: none;
+            align-items: center;
+            text-align: center;
+            color: #050000;
+            text-size-adjust: 5px;
+            margin-bottom: 20px;
+            position: absolute;
+            left: 650px;
+        }
+        .services button{
+            background-color: #d8d8d8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  
+  font-size: 20px;
+
+        }
+
+        .services li {
+            margin-bottom: 10px;
+        }
+
+        .testimonial {
+            background-color: #f4f4f4;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .testimonial h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .testimonial-item img{
+            width: 10%;
+        }
+
+        .contact {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .contact h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"],
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .logo {
+            max-width: 100px;
+            height: auto;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .login-button, .signup-button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+            margin: 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .login-button:hover, .signup-button:hover {
+            background-color: #45a049;
+        }
+        .rating {
+    display: inline-block;
+    font-size: 24px;
+}
+
+.rating span {
+    color: gold;
+    cursor: pointer;
+}
+
+.rating span:hover,
+.rating span:hover ~ span {
+    color: grey;
+}
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://thumbs.dreamstime.com/b/pet-sitter-29050298.jpg" alt="Pet Care Services" class="logo">
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+            
+                <a href="login.html" target="_blank" class="login-button">Login</a>
+            
+        </nav>
+    </header>
+    <div class="hero">
+        <h2>WELCOME TO OnlyPets! <br>Your Furry friends deserve the best  </h2>
+        <p>Want to take your dog on a walk or for a groom, but you're too busy? <br>Don't worry, We got you!</p>
+       
+    </div>
+    
+    <div id="services" class="services">
+        <div class="service">
+            <h2>OUR SERVICES</h2>
+            <img src="https://t4.ftcdn.net/jpg/00/75/35/67/360_F_75356769_saJ9kiQRVuWgLEcXyQKeVJwNb1YAE92w.jpg" alt="Service 1">
+            <button><a href="vet.html"> <b>Veterinary Care</b></a></button>
+            <p>Professional veterinary care to ensure your pet's health and well-being.</p>
+        </div>
+        <div class="service">
+            <img src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/04/petgrooming1.jpg" alt="Service 2">
+            <button><a href="groom.html"> <b>Grooming</b></a></button>
+            <p>Keep your pet looking and feeling their best with our grooming services.</p>
+        </div>
+        <div class="service">
+            <img src="https://www.shutterstock.com/shutterstock/photos/1874227798/display_1500/stock-vector-professional-dog-handler-walks-with-pet-in-park-concept-of-dog-walking-service-volunteering-1874227798.jpg" alt="Service 3">
+            <button><a href="walk.html"> <b>Walking</b></a></button>
+            <p>From tail wags to happy trails, We've got your pet's walk covered.</p>
+        </div>
+        <div class="service">
+            <img src="https://img.freepik.com/free-vector/dog-owner-brushing-fur-domestic-animal-happy-pet-sitting-male-character-smiling-holding-brush-flat-illustration_74855-18739.jpg" alt="not available">
+            <button><a href="sit.html"> <b>Pet Sitting</b></a></button>
+            <p>Providing love and care when you can't be there.</p>
+        </div>
+    </div>
+    <div class="testimonial">
+        <h2>Testimonial</h2>
+        <p>"Great service! My pet loved it!"</p>
+        <div class="rating" data-rating="5"></div>
+    </div>
+
+    <div id="testimonials" class="testimonial">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial-item">
+            <img src="https://t4.ftcdn.net/jpg/02/74/86/39/360_F_274863915_4JnfDXwTaTsjg5w5e7keElOipBswjAte.jpg" alt="Testimonial 1">
+            <p>"I'm so grateful for the care my pet received by the pet sitter from OnlyPets. The staff went above and beyond to ensure my pet's comfort."</p>
+        </div>
+        <div class="testimonial-item">
+            <img src="https://t3.ftcdn.net/jpg/05/04/49/30/360_F_504493085_jz8go7VaoVE8qrvPgSdntN9l6bB4hHIW.jpg" alt="Testimonial 2">
+            <p>"My dog always looks forward to visiting Pet Care Services. The staff is friendly and the facilities are top-notch."</p>
+        </div>
+        <div class="testimonial-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5kg6GDN_EN9FL3XOLQt7fNGvT5ZPFQDLK8Q&usqp=CAU" alt="Testimonial 3">
+            <p>"I highly recommend OnlyPets Services to all pet owners. They truly care about the well-being of every animal."</p>
+        </div>
+        <div class="rating" data-rating="5"></div>
+        <script src="./test.js"></script>
+    </div>
+
+    <div id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or want to schedule an appointment? Fill out the form below:</p>
+        <form action="#" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

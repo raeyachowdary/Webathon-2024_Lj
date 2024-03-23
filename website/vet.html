@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Vet Clinics Nearby</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(data:image/png;base64,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);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #979797;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .clinic-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px;
+            color: #333;
+        }
+
+        .clinic-item {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .clinic-item h3 {
+            margin-top: 0;
+        }
+
+        .clinic-item p {
+            margin-bottom: 5px;
+        }
+
+        .clinic-item a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px; /* Add some top margin */
+            
+        }
+        .clinic-item img{
+            max-width: 20%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Find Vet Clinics Nearby</h1>
+    </header>
+    <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/67dcc931393055.564e356720f02.gif" alt="Vet Care Image">
+
+    <ul class="clinic-list">
+        <li class="clinic-item">
+            <h3>Paws and care veternary clinic </h3>
+            <p>Address: Jubliee hills, hyd</p>
+            <p>Phone: +91 8789678945</p>
+            <a href="https://example.com/vet-clinic-1" target="_blank">More Info</a>
+            <img src="https://images1-fabric.practo.com/practices/682794/pet-s-heaven-pet-clinic-pune-601968fd6f9dc.jpg" alt="" sizes="100 px" srcset="100 px">
+
+        </li>
+        <li class="clinic-item">
+            <h3>Healthy tails animal hospital</h3>
+            <p>Address: Panjagutta, hyd</p>
+            <p>Phone: +91 9989678945 </p>
+            <a href="https://upcutstudio.com/wp-content/uploads/2021/10/Carman_Veterinary_Clinic.jpg" target="_blank">More Info</a>
+            <img src="https://upcutstudio.com/wp-content/uploads/2021/10/Carman_Veterinary_Clinic.jpg" alt="">
+        </li>
+        <li class="clinic-item">
+            <h3>Pet wellness center</h3>
+            <p>Address: Madhapur, hyd</p>
+            <p>Phone: +91 8732678945</p>
+            <a href="https://example.com/vet-clinic-2" target="_blank">More Info</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_JhH5zIRe_fQlN1Qu_z46eS9CtEq7V6LBEYvarx5tnlUHWnOsKXx7C6JR6s5RWHJzI4E&usqp=CAU" alt="">
+        </li>
+        <li class="clinic-item">
+            <h3>Harmony pet clinic</h3>
+            <p>Address: Banjara Hills, hyd</p>
+            <p>Phone: +91 8789678905</p>
+            <a href="https://example.com/vet-clinic-2" target="_blank">More Info</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXOLck_Ka1gaW81VgTngHN7rixALttIRKfHw&usqp=CAU" alt="">
+        </li>
+        <li class="clinic-item">
+            <h3>CareVet clinic</h3>
+            <p>Address: BHEL, hyd</p>
+            <p>Phone: +91 8789678923</p>
+            <a href="https://example.com/vet-clinic-2" target="_blank">More Info</a>
+            <img src="https://cdcssl.ibsrv.net/ibimg/smb/621x388_80/webmgr/0s/8/6/_Client/images/office.png.webp?0971c62f0d94a81bff5d262e0a238780" alt="">
+        </li>
+        <!-- Add more clinic items as needed -->
+    </ul>
+</body>
+</html>

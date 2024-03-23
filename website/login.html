@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reg.css">
+    <title>login</title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+}
+.log{
+    width: 50%;
+    min-height: 675px;
+}
+.form{
+    background-color:rgb(136, 149, 212);
+    width: 50%;
+    min-height: 675px;
+    
+    background-repeat: no-repeat;
+    background-size: auto;
+    position: relative;
+    top: 10%;
+}
+.login{
+    text-align: center;
+    padding: 50px;
+}
+.FORM{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 230px;
+    padding-left: 170px;
+    padding-right: 150px;
+    padding-bottom: 20px;
+}
+.a{
+    text-align: center;
+    color: aliceblue;
+    padding-left: 80px;
+    padding-right: 60px;
+}
+.kr{
+    text-align: center;
+}
+.b{
+    text-align: center;
+}
+.b input,.pass input{
+    background-color: rgba(169, 169, 169, 0.436);
+    border: none;
+    padding: 9px;
+    padding-right: 90px;
+}
+.s{
+    padding-top: 10px;
+}
+.m{
+    text-align: center;
+    padding: 15px;
+}
+.v{
+    text-align: center;
+}
+.v input{
+    color: aliceblue;
+    background-color: brown;
+    border-radius: 50px;
+    padding: 10px;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.kri{
+    margin-left: 280px;
+    border-width: 0.5px;
+    border-radius: 100%;
+    border-style: solid;
+    margin-right: 8px;
+}
+.k{
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 100%;
+}
+img{
+    margin-bottom: 50px;
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="log">
+        <h1 class="login">LOGIN</h1>
+        <img class="kri" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZMNNtOhc01gmISFnJU2H1OhRgFZ3rs4OhYw&usqp=CAU" width="40px" alt="">
+        <img class="k" src="data:image/png;base64,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" width="40px" alt="">
+        <p class="kr">or use your account</p>
+        <div class="b">
+        <div class="s">
+        <label for="e"></label>
+        <input type="text" name="e" id="e" placeholder="Email">
+        </div>
+        <br>
+        <label for="pass"></label>
+        <input type="text" name="pass" id="pass" placeholder="Password">
+        </div>
+        <p class="m">forgot your password</p>
+        <div class="v">
+        <label for="in"></label>
+        <input type="button" value="LOG IN">
+        </div>
+    </div>
+    <div class="form">
+        <h1 class="FORM">OnlyPets</h1>
+        <p class="a">login to your profile to connect with other pet lovers!</p>
+    </div>
+</body>
+</html>

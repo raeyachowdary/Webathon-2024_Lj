@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Sitter Profiles</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #49688a; /* Green */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .sitter-profiles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .sitter-profile {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .sitter-profile h2 {
+            margin-top: 0;
+        }
+
+        .sitter-profile img {
+            max-width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .appoint-button {
+            background-color: #7ba9b9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .appoint-button:hover {
+            background-color: #d6a6ee;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pet Sitter Profiles</h1>
+    </header>
+    <div class="sitter-profiles">
+        <div class="sitter-profile">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/GoslingBFI081223_%2822_of_30%29_%2853388157347%29_%28cropped%29.jpg/800px-GoslingBFI081223_%2822_of_30%29_%2853388157347%29_%28cropped%29.jpg" alt="Pet Sitter 1">
+            <h2>Pet Sitter 1</h2>
+            <p>Name: John Doe</p>
+            <p>Age: 30</p>
+            <p>Years of Experience: 5</p>
+            <button class="appoint-button" onclick="appointSitter('John Doe')">Appoint</button>
+        </div>
+        <div class="sitter-profile">
+            <img src="https://img.freepik.com/premium-photo/image-25-year-old-indian-man-that-is-smiling-camera_878783-7219.jpg" alt="Pet Sitter 2">
+            <h2>Pet Sitter 2</h2>
+            <p>Name: Jane Smith</p>
+            <p>Age: 25</p>
+            <p>Years of Experience: 3</p>
+            <button class="appoint-button" onclick="appointSitter('Jane Smith')">Appoint</button>
+        </div>
+        <div class="sitter-profile">
+            <img src="https://media.istockphoto.com/id/1078084172/photo/business-woman-portrait-outdoors.jpg?s=612x612&w=0&k=20&c=5EZG6JIsWMhc7MXqHmFDgegZDMjS6BSOP7BNUZq5cuc=" alt="Pet Sitter 3">
+            <h2>Pet Sitter 3</h2>
+            <p>Name: Michael Brown</p>
+            <p>Age: 28</p>
+            <p>Years of Experience: 4</p>
+            <button class="appoint-button" onclick="appointSitter('Michael Brown')">Appoint</button>
+        </div>
+        <div class="sitter-profile">
+            <img src="https://media.licdn.com/dms/image/D5603AQEUnVmPM0SV1w/profile-displayphoto-shrink_800_800/0/1698458131282?e=2147483647&v=beta&t=37tGObMIboV4kbem8qpDav_JTFSF3EFvpeSMnLrtBXc" alt="Pet Sitter 4">
+            <h2>Pet Sitter 4</h2>
+            <p>Name: Emily Johnson</p>
+            <p>Age: 32</p>
+            <p>Years of Experience: 6</p>
+            <button class="appoint-button" onclick="appointSitter('Emily Johnson')">Appoint</button>
+        </div>
+        <div class="sitter-profile">
+            <img src="https://i.ndtvimg.com/mt/movies/2013-12/paul-walker2.jpg" alt="Pet Sitter 5">
+            <h2>Pet Sitter 5</h2>
+            <p>Name: David Lee</p>
+            <p>Age: 27</p>
+            <p>Years of Experience: 3</p>
+            <button class="appoint-button" onclick="appointSitter('David Lee')">Appoint</button>
+        </div>
+        <!-- Add more sitter profiles as needed -->
+    </div>
+
+    <script>
+        function appointSitter(sitterName) {
+            var time = prompt("Enter preferred pet sitting time (HH:MM AM/PM):");
+            var distance = prompt("Enter preferred walk distance (in miles):");
+
+            if (time && distance) {
+                alert("You have appointed " + sitterName + " for a walk at " + time + " covering a distance of " + distance + " miles.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Grooming Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #b5bcbe; /* Green color */
+            color: rgb(18, 18, 18);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .service {
+            width: 300px;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .service img {
+            max-width: 150px;
+            max-height: 150px;
+            margin-bottom: 20px;
+        }
+
+        .service h2 {
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pet Grooming Services</h1>
+    </header>
+
+    <div class="services">
+        <div class="service">
+            <img src="https://static.wixstatic.com/media/4917f1_6323aeff8c694f6b90d90e2192dc9f1c~mv2.gif" alt="Shampoo and Blow Dry">
+            <h2>Shampoo and Blow Dry</h2>
+            <p>Our experts will shampoo and blow dry your pet's fur, leaving them fresh and clean.</p>
+            <button id="bookButton">Book Appointment</button>
+        </div>
+        <div class="service">
+            <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/35469ee9-ba7d-4baa-bcd3-93e18ae23e87/dgh81uz-c0da3f41-4539-414c-9668-68512936b776.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzM1NDY5ZWU5LWJhN2QtNGJhYS1iY2QzLTkzZTE4YWUyM2U4N1wvZGdoODF1ei1jMGRhM2Y0MS00NTM5LTQxNGMtOTY2OC02ODUxMjkzNmI3NzYuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.p-hBn1t0L0z5mYZB7kg7lzEDqCLqPO5T8D9kVWuyFbk" alt="Paw Cleaning">
+            <h2>Paw Cleaning</h2>
+            <p>We'll clean your pet's paws, removing dirt and debris for a tidy appearance.</p>
+            <button id="bookButton">Book Appointment</button>
+        </div>
+        <div class="service">
+            <img src="https://cdn.pixabay.com/animation/2023/04/29/08/43/08-43-00-635_512.gif" alt="Oral Care">
+            <h2>Oral Care</h2>
+            <p>Ensure your pet's dental health with our oral care services, including teeth cleaning and breath freshening.</p>
+            <button id="bookButton">Book Appointment</button>
+        </div>
+        <div class="service">
+            <img src="https://cdna.artstation.com/p/assets/images/images/018/279/982/original/zoe-eigner-whitedog-1.gif?1558805775" alt="Fur Cutting">
+            <h2>Fur Cutting</h2>
+            <p>Our experienced groomers will give your pet a stylish fur cut, keeping them comfortable and looking their best.</p>
+            <button id="bookButton">Book Appointment</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('bookButton').addEventListener('click', function() {
+            // Example AJAX request to backend endpoint
+            fetch('/bookAppointment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ appointmentTime: '2024-03-23 10:00 AM' }) // Example data
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Appointment booked successfully!');
+                } else {
+                    alert('Failed to book appointment. Please try again later.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
+        });
+    </script>
+</body>
+</html>
