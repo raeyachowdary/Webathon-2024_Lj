@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Grooming Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #b5bcbe; /* Green color */
+            color: rgb(18, 18, 18);
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 0;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .service {
+            width: 300px;
+            background-color: #f4f4f4;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .service img {
+            max-width: 150px;
+            max-height: 150px;
+            margin-bottom: 20px;
+        }
+        .service h2 {
+            margin-bottom: 10px;
+        }
+        .service p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Pet Grooming Services</h1>
+    </header>
+    <div class="services">
+        <div class="service">
+            <img src="https://static.wixstatic.com/media/4917f1_6323aeff8c694f6b90d90e2192dc9f1c~mv2.gif" alt="Shampoo and Blow Dry">
+            <h2>Shampoo and Blow Dry</h2>
+            <p>Our experts will shampoo and blow dry your pet's fur, leaving them fresh and clean.</p>
+            <button class="bookButton" data-service="Shampoo and Blow Dry">Book Appointment</button>
+        </div>
+        <div class="service">
+            <img src="https://i.pinimg.com/originals/a5/0e/06/a50e06f21e5c10260d74c9e8f7b4f9a4.gif" alt="Paw Cleaning">
+            <h2>Paw Cleaning</h2>
+            <p>We'll clean your pet's paws, removing dirt and debris for a tidy appearance.</p>
+            <button class="bookButton" data-service="Paw Cleaning">Book Appointment</button>
+        </div>
+        <div class="service">
+            <img src="https://cdn.pixabay.com/animation/2023/04/29/08/43/08-43-00-635_512.gif" alt="Oral Care">
+            <h2>Oral Care</h2>
+            <p>Ensure your pet's dental health with our oral care services, including teeth cleaning and breath freshening.</p>
+            <button class="bookButton" data-service="Oral Care">Book Appointment</button>
+        </div>
+        <div class="service">
+            <img src="https://cdna.artstation.com/p/assets/images/images/018/279/982/original/zoe-eigner-whitedog-1.gif?1558805775" alt="Fur Cutting">
+            <h2>Fur Cutting</h2>
+            <p>Our experienced groomers will give your pet a stylish fur cut, keeping them comfortable and looking their best.</p>
+            <button class="bookButton" data-service="Fur Cutting">Book Appointment</button>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.bookButton').forEach(button => {
+            button.addEventListener('click', function() {
+                const service = this.dataset.service;
+                // Example AJAX request to backend endpoint
+                fetch('/bookAppointment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ service, appointmentTime: new Date().toISOString() }) // Example data
+                })
+                .then(response => {
+                    if (response.ok) {
+                        alert('Appointment booked successfully for ' + service + '!');
+                    } else {
+                        alert('Failed to book appointment. Please try again later.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again later.');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

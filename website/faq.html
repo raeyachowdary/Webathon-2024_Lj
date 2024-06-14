@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #b5bcbe; /* Green color */
+            color: rgb(18, 18, 18);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        .faq {
+            margin: 20px 0;
+        }
+
+        .faq h2 {
+            cursor: pointer;
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 5px;
+        }
+
+        .faq p {
+            display: none;
+            margin: 0;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Frequently Asked Questions</h1>
+    </header>
+
+    <div class="faq">
+        <h2>What services do you offer?</h2>
+        <p>We offer a variety of pet grooming services including shampoo and blow dry, paw cleaning, oral care, and fur cutting.</p>
+    </div>
+    <div class="faq">
+        <h2>How can I book an appointment?</h2>
+        <p>You can book an appointment directly from our website by clicking the "Book Appointment" button next to the desired service.</p>
+    </div>
+    <div class="faq">
+        <h2>What are your working hours?</h2>
+        <p>Our working hours are from 9:00 AM to 6:00 PM, Monday to Saturday.</p>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq h2').forEach(item => {
+            item.addEventListener('click', () => {
+                const content = item.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
